@@ -541,6 +541,7 @@ func (vcenter *VCenter) Query(config Configuration, InfluxDBClient influxclient.
 	}
 	//InfluxDB send
 	err = InfluxDBClient.Write(bp)
+	stdlog.Println(bp)
 	if err != nil {
 		errlog.Println(err)
 	} else {
